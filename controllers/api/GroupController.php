@@ -5,6 +5,7 @@ namespace app\controllers\api;
 use Yii;
 use yii\filters\Cors;
 use app\Service\GroupCreateService;
+use app\Service\GroupListService;
 
 class GroupController extends \yii\rest\Controller{
     public $enableCsrfValidation = false;
@@ -39,6 +40,14 @@ class GroupController extends \yii\rest\Controller{
         $service = new GroupCreateService();
         return $this->asJson(array(
             $service->create(Yii::$app->request)
+        ));
+    }
+
+    public function actionList()
+    {
+        $service = new GroupListService();
+        return $this->asJson(array(
+            $service->list(Yii::$app->request)
         ));
     }
 

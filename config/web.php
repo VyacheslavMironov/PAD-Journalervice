@@ -56,7 +56,7 @@ $config = [
                     'controller' => ['api/group'],
                     'extraPatterns' => [
                         'POST create' => 'create',
-                        'GET show' => 'show'
+                        'GET list' => 'list'
                     ]
                 ],
             ],
