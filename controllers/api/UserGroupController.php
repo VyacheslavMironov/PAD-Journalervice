@@ -4,12 +4,12 @@ namespace app\controllers\api;
 
 use Yii;
 use yii\filters\Cors;
-use app\Service\GroupCreateService;
-use app\Service\GroupListService;
-use app\Service\GroupDeleteService;
-use app\Service\GroupShowService;
+use app\Service\UserGroupShowService;
+use app\Service\UserGroupShowIsNotService;
+use app\Service\UserGroupCreateService;
+use app\Service\UserGroupRemoveService;
 
-class GroupController extends \yii\rest\Controller
+class UserGroupController extends \yii\rest\Controller
 {
     public $enableCsrfValidation = false;
     
@@ -38,33 +38,35 @@ class GroupController extends \yii\rest\Controller
         return $behaviors;
     }
 
+    public function actionShow()
+    {
+        $service = new UserGroupShowService();
+        return $this->asJson(array( 
+            $service->show(Yii::$app->request)
+        ));
+    }
+
+    public function actionNot()
+    {
+        $service = new UserGroupShowIsNotService();
+        return $this->asJson(array( 
+            $service->show(Yii::$app->request)
+        ));
+    }
+
     public function actionCreate()
     {
-        $service = new GroupCreateService();
-        return $this->asJson(array(
+        $service = new UserGroupCreateService();
+        return $this->asJson(array( 
             $service->create(Yii::$app->request)
         ));
     }
 
-    public function actionList()
+    public function actionRemove()
     {
-        $service = new GroupListService();
-        return $this->asJson(array(
-            $service->list(Yii::$app->request)
-        ));
-    }
-
-    public function actionDelete()
-    {
-        $service = new GroupDeleteService();
-        return $this->asJson(array( $service->delete(Yii::$app->request) ));
-    }
-
-    public function actionShow()
-    {
-        $service = new GroupShowService();
+        $service = new UserGroupRemoveService();
         return $this->asJson(array( 
-            $service->show(Yii::$app->request)
+            $service->remove(Yii::$app->request)
         ));
     }
 }

@@ -56,7 +56,20 @@ $config = [
                     'controller' => ['api/group'],
                     'extraPatterns' => [
                         'POST create' => 'create',
-                        'GET list' => 'list'
+                        'GET list' => 'list',
+                        'GET show' => 'show',
+                        'GET delete' => 'delete',
+                    ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'pluralize'=> false,
+                    'controller' => ['api/user-group'],
+                    'extraPatterns' => [
+                        'GET show' => 'show',
+                        'GET user/not-group' => 'not',
+                        'POST create' => 'create',
+                        'GET remove' => 'remove',
                     ]
                 ],
             ],
