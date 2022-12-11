@@ -12,7 +12,7 @@ use Yii;
  * @property int $filial_id
  * @property int $lesson_id
  * @property int $group_id
- * @property string $date_from
+ * @property string|null $day_in
  * @property string $time_to
  * @property string $time_end
  *
@@ -39,8 +39,9 @@ class Schedule extends \yii\db\ActiveRecord
         return [
             [['organization_id', 'filial_id', 'lesson_id', 'group_id'], 'default', 'value' => null],
             [['organization_id', 'filial_id', 'lesson_id', 'group_id'], 'integer'],
-            [['filial_id', 'lesson_id', 'group_id', 'date_from', 'time_to', 'time_end'], 'required'],
-            [['date_from', 'time_to', 'time_end'], 'safe'],
+            [['filial_id', 'lesson_id', 'group_id', 'time_to', 'time_end'], 'required'],
+            [['time_to', 'time_end'], 'safe'],
+            [['day_in'], 'string', 'max' => 3],
             [['filial_id'], 'exist', 'skipOnError' => true, 'targetClass' => Filial::class, 'targetAttribute' => ['filial_id' => 'id']],
             [['group_id'], 'exist', 'skipOnError' => true, 'targetClass' => Group::class, 'targetAttribute' => ['group_id' => 'id']],
             [['lesson_id'], 'exist', 'skipOnError' => true, 'targetClass' => Lessons::class, 'targetAttribute' => ['lesson_id' => 'id']],
@@ -59,7 +60,7 @@ class Schedule extends \yii\db\ActiveRecord
             'filial_id' => 'Filial ID',
             'lesson_id' => 'Lesson ID',
             'group_id' => 'Group ID',
-            'date_from' => 'Date From',
+            'day_in' => 'Day In',
             'time_to' => 'Time To',
             'time_end' => 'Time End',
         ];

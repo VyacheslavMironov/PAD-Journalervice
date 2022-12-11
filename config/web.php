@@ -72,6 +72,14 @@ $config = [
                         'GET remove' => 'remove',
                     ]
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'pluralize'=> false,
+                    'controller' => ['api/timetable'],
+                    'extraPatterns' => [
+                        'POST create' => 'create',
+                    ]
+                ],
             ],
         ],
     ],

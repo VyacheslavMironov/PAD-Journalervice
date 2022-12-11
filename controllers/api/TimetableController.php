@@ -4,12 +4,9 @@ namespace app\controllers\api;
 
 use Yii;
 use yii\filters\Cors;
-use app\Service\GroupCreateService;
-use app\Service\GroupListService;
-use app\Service\GroupDeleteService;
-use app\Service\GroupShowService;
+use app\Service\TimetableCreateService;
 
-class GroupController extends \yii\rest\Controller
+class TimetableController extends \yii\rest\Controller
 {
     public $enableCsrfValidation = false;
     
@@ -20,7 +17,7 @@ class GroupController extends \yii\rest\Controller
     {
         $behaviors = parent::behaviors();
         // $behaviors['authenticator'] = [
-        //     'class' => JwtHttpBearerAuth::class,
+            // 'class' => JwtHttpBearerAuth::class,
         // ];
         $behaviors['corsFilter'] = [
             'class' => Cors::class,
@@ -40,31 +37,9 @@ class GroupController extends \yii\rest\Controller
 
     public function actionCreate()
     {
-        $service = new GroupCreateService();
+        $service = new TimetableCreateService();
         return $this->asJson(array(
             $service->create(Yii::$app->request)
-        ));
-    }
-
-    public function actionList()
-    {
-        $service = new GroupListService();
-        return $this->asJson(array(
-            $service->list(Yii::$app->request)
-        ));
-    }
-
-    public function actionDelete()
-    {
-        $service = new GroupDeleteService();
-        return $this->asJson(array( $service->delete(Yii::$app->request) ));
-    }
-
-    public function actionShow()
-    {
-        $service = new GroupShowService();
-        return $this->asJson(array( 
-            $service->show(Yii::$app->request)
         ));
     }
 }

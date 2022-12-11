@@ -28,8 +28,10 @@ class m221014_090245_create_schedule_table extends Migration
             // Идентификатор группы.
             'group_id' => Schema::TYPE_BIGINT.' NOT NULL',
 
-            // Дата проведения предмета.
-            'date_from' => Schema::TYPE_DATE.' NOT NULL',
+            // День недели проведения предмета.
+            'day_in' => Schema::TYPE_CHAR."(3) CHECK(
+                day_in IN ('ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС')
+            ) DEFAULT 'ПН'",
 
             // Время начала предмета.
             'time_to' => Schema::TYPE_TIME.' NOT NULL',
