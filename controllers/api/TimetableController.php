@@ -5,6 +5,7 @@ namespace app\controllers\api;
 use Yii;
 use yii\filters\Cors;
 use app\Service\TimetableCreateService;
+use app\Service\TimetableShowService;
 
 class TimetableController extends \yii\rest\Controller
 {
@@ -40,6 +41,14 @@ class TimetableController extends \yii\rest\Controller
         $service = new TimetableCreateService();
         return $this->asJson(array(
             $service->create(Yii::$app->request)
+        ));
+    }
+
+    public function actionShow()
+    {
+        $service = new TimetableShowService();
+        return $this->asJson(array(
+            $service->show(Yii::$app->request)
         ));
     }
 }
