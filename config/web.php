@@ -78,7 +78,8 @@ $config = [
                     'controller' => ['api/timetable'],
                     'extraPatterns' => [
                         'POST create' => 'create',
-                        'GET show' => 'show'
+                        'GET show' => 'show',
+                        'GET show/teacher' => 'show-teacher'
                     ]
                 ],
             ],

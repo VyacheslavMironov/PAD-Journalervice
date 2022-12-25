@@ -14,6 +14,7 @@ class TimetableCreateRepository
         $db->filial_id = $context->filial_id;
         $db->group_id = $context->group_id;
         $db->lesson_id = $context->lesson_id;
+        $db->teacher_id = $context->teacher_id;
         $db->day_in = $context->day_in;
         $db->time_to = $context->time_to;
         $db->time_end = $context->time_end;

@@ -26,6 +26,10 @@ class TimetableCreateService
         {
             throw new ErrorException('Укажите ID предмета!');
         }
+        elseif (is_null($request->post('teacher_id')))
+        {
+            throw new ErrorException('Укажите ID преподавателя!');
+        }
         elseif (is_null($request->post('day_in')))
         {
             throw new ErrorException('Укажите день проведения предмета!');
@@ -47,6 +51,7 @@ class TimetableCreateService
                     $request->post('filial_id'),
                     $request->post('group_id'),
                     $request->post('lesson_id'),
+                    $request->post('teacher_id'),
                     $request->post('day_in'),
                     $request->post('time_to'),
                     $request->post('time_end')

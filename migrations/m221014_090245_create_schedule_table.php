@@ -28,6 +28,9 @@ class m221014_090245_create_schedule_table extends Migration
             // Идентификатор группы.
             'group_id' => Schema::TYPE_BIGINT.' NOT NULL',
 
+            // Идентификатор преподавателя.
+            'teacher_id' => Schema::TYPE_BIGINT.' NOT NULL',
+
             // День недели проведения предмета.
             'day_in' => Schema::TYPE_CHAR."(3) CHECK(
                 day_in IN ('ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС')
@@ -93,6 +96,20 @@ class m221014_090245_create_schedule_table extends Migration
             'schedule',
             'group_id',
             'group',
+            'id'
+        );
+
+        $this->createIndex(
+            'idx-schedule-teacher_id',
+            'schedule',
+            'teacher_id'
+        );
+
+        $this->addForeignKey(
+            'fk-schedule-teacher_id',
+            'schedule',
+            'teacher_id',
+            'users',
             'id'
         );
     }
