@@ -32,5 +32,9 @@ phpunit.phar
 tests/_output/*
 tests/_support/_generated
 
+# Логи
+log/access.log
+log/error.log
+
 #vagrant folder
 /.vagrant

@@ -82,6 +82,15 @@ $config = [
                         'GET show/teacher' => 'show-teacher'
                     ]
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'pluralize'=> false,
+                    'controller' => ['api/statement'],
+                    'extraPatterns' => [
+                        'POST create' => 'create',
+                        'GET list' => 'list',
+                    ]
+                ],
             ],
         ],
     ],

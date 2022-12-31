@@ -33,6 +33,15 @@ class m221014_073827_create_statements_table extends Migration
 
             // Значение оценки.
             'value' => Schema::TYPE_CHAR.'(12) NOT NULL',
+            
+            // За какой день.
+            'day' => Schema::TYPE_CHAR.'(2) NOT NULL',
+            
+            // за какой месяц.
+            'month' => Schema::TYPE_CHAR.'(2) NOT NULL',
+            
+            // За какой год.
+            'year' => Schema::TYPE_CHAR.'(4) NOT NULL',
 
             // Дата и время проставления оценки.
             'created_at' => Schema::TYPE_DATE.' DEFAULT NOW()::timestamp',
