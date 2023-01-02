@@ -5,7 +5,7 @@ namespace app\DTO;
 class GroupListDTO
 {
     public int $organization_id;
-    public int $filial_id;
+    public int|null $filial_id;
 
     public function __construct($organization_id, $filial_id)
     {

@@ -9,10 +9,16 @@ class GroupListRepository
 
     public function list(\app\DTO\GroupListDTO $context)
     {
-        $db = Group::findAll([
-            'organization_id' => $context->organization_id,
-            'filial_id' => $context->filial_id
-        ]);
+        if (is_null($context->filial_id))
+        {
+            $db = Group::findAll(['organization_id' => $context->organization_id]);
+        } else {
+            $db = Group::findAll([
+                'organization_id' => $context->organization_id,
+                'filial_id' => $context->filial_id
+            ]);
+        }
+        
         return $db;
     }
 

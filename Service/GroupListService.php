@@ -14,10 +14,6 @@ class GroupListService
         {
             throw new ErrorException('Укажите ID организации!');
         } 
-        elseif (is_null($request->get('filial_id')))
-        {
-            throw new ErrorException('Укажите ID филиала!');
-        }
         else {
             $repository = new GroupListRepository();
             // Тут в принцепе ошибки быть не может

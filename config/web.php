@@ -91,6 +91,14 @@ $config = [
                         'GET list' => 'list',
                     ]
                 ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'pluralize'=> false,
+                    'controller' => ['api/user-value'],
+                    'extraPatterns' => [
+                        'GET show' => 'show',
+                    ]
+                ],
             ],
         ],
     ],
