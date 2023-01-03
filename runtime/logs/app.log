@@ -19551,3 +19551,293 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1672681570.5785
     'REQUEST_TIME' => 1672681570
 ]
+2023-01-03 05:21:48 [127.0.0.1][-][-][error][TypeError] TypeError: Cannot assign string to property app\DTO\TimetableShowDTO::$group_id of type int in /var/www/PAD-Journalervice/DTO/TimetableShowDTO.php:15
+Stack trace:
+#0 /var/www/PAD-Journalervice/Service/TimetableShowService.php(68): app\DTO\TimetableShowDTO->__construct()
+#1 /var/www/PAD-Journalervice/controllers/api/TimetableController.php(52): app\Service\TimetableShowService->show()
+#2 [internal function]: app\controllers\api\TimetableController->actionShow()
+#3 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#5 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#6 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /var/www/PAD-Journalervice/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2023-01-03 05:21:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'organization_id' => '1'
+    'filial_id' => '1'
+    'group_id' => 'undefined'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_CONTENT_LENGTH' => '47'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8082'
+    'APPLICATION_ENV' => 'development'
+    'HTTPS' => 'on'
+    'SCRIPT_FILENAME' => '/var/www/PAD-Journalervice/web/index.php'
+    'PATH_INFO' => ''
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '8082'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_USER' => ''
+    'REMOTE_PORT' => '41830'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.18.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/PAD-Journalervice/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/api/timetable/show?organization_id=1&&filial_id=1&&group_id=undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '47'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'organization_id=1&&filial_id=1&&group_id=undefined'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1672723308.3726
+    'REQUEST_TIME' => 1672723308
+]
+2023-01-03 05:21:56 [127.0.0.1][-][-][error][TypeError] TypeError: Cannot assign string to property app\DTO\TimetableShowDTO::$group_id of type int in /var/www/PAD-Journalervice/DTO/TimetableShowDTO.php:15
+Stack trace:
+#0 /var/www/PAD-Journalervice/Service/TimetableShowService.php(68): app\DTO\TimetableShowDTO->__construct()
+#1 /var/www/PAD-Journalervice/controllers/api/TimetableController.php(52): app\Service\TimetableShowService->show()
+#2 [internal function]: app\controllers\api\TimetableController->actionShow()
+#3 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#5 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#6 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /var/www/PAD-Journalervice/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2023-01-03 05:21:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'organization_id' => '1'
+    'filial_id' => '1'
+    'group_id' => 'undefined'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONTENT_LENGTH' => '47'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8082'
+    'APPLICATION_ENV' => 'development'
+    'HTTPS' => 'on'
+    'SCRIPT_FILENAME' => '/var/www/PAD-Journalervice/web/index.php'
+    'PATH_INFO' => ''
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '8082'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_USER' => ''
+    'REMOTE_PORT' => '38046'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.18.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/PAD-Journalervice/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/api/timetable/show?organization_id=1&&filial_id=1&&group_id=undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '47'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'organization_id=1&&filial_id=1&&group_id=undefined'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1672723316.8781
+    'REQUEST_TIME' => 1672723316
+]
+2023-01-03 05:21:59 [127.0.0.1][-][-][error][TypeError] TypeError: Cannot assign string to property app\DTO\TimetableShowDTO::$group_id of type int in /var/www/PAD-Journalervice/DTO/TimetableShowDTO.php:15
+Stack trace:
+#0 /var/www/PAD-Journalervice/Service/TimetableShowService.php(68): app\DTO\TimetableShowDTO->__construct()
+#1 /var/www/PAD-Journalervice/controllers/api/TimetableController.php(52): app\Service\TimetableShowService->show()
+#2 [internal function]: app\controllers\api\TimetableController->actionShow()
+#3 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#5 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#6 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /var/www/PAD-Journalervice/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2023-01-03 05:21:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'organization_id' => '1'
+    'filial_id' => '1'
+    'group_id' => 'undefined'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONTENT_LENGTH' => '47'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8082'
+    'APPLICATION_ENV' => 'development'
+    'HTTPS' => 'on'
+    'SCRIPT_FILENAME' => '/var/www/PAD-Journalervice/web/index.php'
+    'PATH_INFO' => ''
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '8082'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_USER' => ''
+    'REMOTE_PORT' => '41830'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.18.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/PAD-Journalervice/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/api/timetable/show?organization_id=1&&filial_id=1&&group_id=undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '47'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'organization_id=1&&filial_id=1&&group_id=undefined'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1672723319.5251
+    'REQUEST_TIME' => 1672723319
+]
+2023-01-03 05:22:02 [127.0.0.1][-][-][error][TypeError] TypeError: Cannot assign string to property app\DTO\TimetableShowDTO::$group_id of type int in /var/www/PAD-Journalervice/DTO/TimetableShowDTO.php:15
+Stack trace:
+#0 /var/www/PAD-Journalervice/Service/TimetableShowService.php(68): app\DTO\TimetableShowDTO->__construct()
+#1 /var/www/PAD-Journalervice/controllers/api/TimetableController.php(52): app\Service\TimetableShowService->show()
+#2 [internal function]: app\controllers\api\TimetableController->actionShow()
+#3 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#4 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#5 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#6 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#7 /var/www/PAD-Journalervice/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#8 /var/www/PAD-Journalervice/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2023-01-03 05:22:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'organization_id' => '1'
+    'filial_id' => '1'
+    'group_id' => 'undefined'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONTENT_LENGTH' => '47'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => '127.0.0.1:8082'
+    'APPLICATION_ENV' => 'development'
+    'HTTPS' => 'on'
+    'SCRIPT_FILENAME' => '/var/www/PAD-Journalervice/web/index.php'
+    'PATH_INFO' => ''
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => '_'
+    'SERVER_PORT' => '8082'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_USER' => ''
+    'REMOTE_PORT' => '38046'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.18.0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/var/www/PAD-Journalervice/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/api/timetable/show?organization_id=1&&filial_id=1&&group_id=undefined'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '47'
+    'CONTENT_TYPE' => 'application/json'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'organization_id=1&&filial_id=1&&group_id=undefined'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1672723322.3179
+    'REQUEST_TIME' => 1672723322
+]
